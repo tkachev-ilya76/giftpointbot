@@ -8,6 +8,8 @@
             mainButton.text = "Подтвердить"; 
             mainButton.enable();           
             mainButton.show();
+            var formData = new FormData(document.querySelector('form'))
+            mainButton.onClick(()=>window.Telegram.WebApp.sendData(JSON.stringify(formData)));
         </script>
     </head>
     <body>
