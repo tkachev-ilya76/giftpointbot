@@ -12,24 +12,35 @@
             mainButton.onClick(function(){
                 var formData = new FormData(document.querySelector('form'));
                 console.info(formData)
-                window.Telegram.WebApp.sendData('data');
+                window.Telegram.WebApp.sendData(formData);
             });
         </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet"> 
         <style type="text/css">
             body{
                 
                 background-color: var(--tg-theme-bg-color);
+                font-family: 'Open Sans', sans-serif;
                 font-size: 18px;
             }
             form{
                 width: auto;
+                
             }
             label{
                 color: var(--tg-theme-text-color);
+                margin: 5px 20px;
             }
             input{
+                margin: 5px 20px;
+                padding: 5px;
+                width: 90%;
                 color: var(--tg-theme-text-color);
-                background-color: var(--tg-theme-bg-color)
+                background-color: var(--tg-theme-bg-color);
+                font-family: 'Open Sans', sans-serif;
+                
             }
         </style>
     </head>
