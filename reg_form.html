@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <script src="https://telegram.org/js/telegram-web-app.js"></script>
+        <script>
+            const mainButton = window.Telegram.WebApp;
+            mainButton.text = "Подтвердить";
+            mainButton.enable();
+            mainButton.show();
+        </script>
+    </head>
     <body>
         <form>
             <label for="name">Имя:</label><br>
