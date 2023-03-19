@@ -10,9 +10,8 @@
             mainButton.show();
             
             mainButton.onClick(function(){
-                var formData = new FormData(document.querySelector('form'));
-                console.info(formData)
-                window.Telegram.WebApp.sendData(formData);
+                var formData = new FormData(document.querySelector('form'));                
+                window.Telegram.WebApp.sendData(JSON.stringify(formData));
             });
         </script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
