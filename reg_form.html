@@ -11,9 +11,9 @@
             
             mainButton.onClick(function(){
                 var formData = new FormData(document.querySelector('form'));
-                name = document.getElementById("name");   
-                bdate = document.getElementById("bdate");
-                promo = document.getElementById("promo");
+                name = document.getElementById("name").innerHTML;   
+                bdate = document.getElementById("bdate").innerHTML;
+                promo = document.getElementById("promo").innerHTML;
                 const data = {
                     name: name,
                     bdate: bdate,
