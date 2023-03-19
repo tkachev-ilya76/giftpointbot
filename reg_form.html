@@ -3,9 +3,10 @@
     <head>
         <script src="https://telegram.org/js/telegram-web-app.js"></script>
         <script>
-            const mainButton = window.Telegram.WebApp;
-            mainButton.text = "Подтвердить";
-            mainButton.ready();
+            Telegram.WebApp.ready();
+            const mainButton = window.Telegram.WebApp.MainButton;
+            mainButton.text = "Подтвердить"; 
+            mainButton.enable();           
             mainButton.show();
         </script>
     </head>
