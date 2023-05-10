@@ -6,5 +6,10 @@
     <script>
         var webApp = window.Telegram.WebApp;
         webApp.showScanQrPopup("text");
+        
+        webApp.onEvent("qrTextReceived", (text) => {
+            webApp.sendData(text);
+            webApp.closeScanQrPopup();
+        });
     </script>
 </body>
