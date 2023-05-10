@@ -9,9 +9,10 @@
         }
     </style>
     <script>
+        Telegram.WebApp.ready();
         var webApp = window.Telegram.WebApp;
         webApp.onEvent("qrTextReceived", (text) => {
-            document.getElementById("data").innerHTML = text.toString();
+            document.getElementById("data").innerHTML = JSON.stringify(text);
             closeScanQrPopup()
         });
         webApp.showScanQrPopup("text");
