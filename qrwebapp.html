@@ -13,7 +13,7 @@
         var webApp = window.Telegram.WebApp;
         webApp.onEvent("qrTextReceived", (text) => {
             document.getElementById("data").innerHTML = text.data;
-            closeScanQrPopup();
+            webApp.closeScanQrPopup();
         });
         webApp.showScanQrPopup("text");
         
