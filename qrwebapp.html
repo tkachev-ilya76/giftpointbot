@@ -12,8 +12,8 @@
         Telegram.WebApp.ready();
         var webApp = window.Telegram.WebApp;
         webApp.onEvent("qrTextReceived", (text) => {
-            document.getElementById("data").innerHTML = JSON.stringify(text);
-            closeScanQrPopup()
+            document.getElementById("data").innerHTML = text.data;
+            closeScanQrPopup();
         });
         webApp.showScanQrPopup("text");
         
