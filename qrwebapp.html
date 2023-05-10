@@ -6,7 +6,8 @@
     <script>
         var webApp = window.Telegram.WebApp;
         webApp.onEvent("qrTextReceived", (text) => {
-            document.getElementById("data").innerHTML = text;
+            document.getElementById("data").innerHTML = text.toString();
+            closeScanQrPopup()
         });
         webApp.showScanQrPopup("text");
         
